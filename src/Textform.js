@@ -9,7 +9,10 @@ export default function Textform(props) {
     }
     const copy=()=>{
         props.calert("your text has been copied","success");
-        navigator.clipboard.writeText(text);
+        var cvalue=document.getElementById("mytextform");
+        cvalue.select();
+        cvalue.setSelectionRange(0,99999)
+        navigator.clipboard.write(cvalue.value);
     }
     const clear=()=>{
         setText("");
