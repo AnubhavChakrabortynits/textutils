@@ -12,7 +12,7 @@ export default function Textform(props) {
         var cvalue=document.getElementById("mytextform");
         cvalue.select();
         cvalue.setSelectionRange(0,99999)
-        navigator.clipboard.write(cvalue.value);
+        navigator.clipboard.writeText(cvalue.value);
     }
     const clear=()=>{
         setText("");
